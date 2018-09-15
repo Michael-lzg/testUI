@@ -130,6 +130,13 @@ const router = new Router({
       component: (resolve) => {
         require(['../views/djs'], resolve)
       }
+    },
+    {
+      path: '/calendar',
+      name: 'calendar',
+      component: (resolve) => {
+        require(['../views/calendar'], resolve)
+      }
     }
   ]
 })

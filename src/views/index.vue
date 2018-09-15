@@ -26,7 +26,8 @@ export default {
         {name: '获取位置并搜索周边', url: '/location'},
         {name: '百分比圆环', url: '/progressBar'},
         {name: 'echarts', url: '/echart'},
-        {name: '时间选择器', url: '/dateTime'}
+        {name: '时间选择器', url: '/dateTime'},
+        {name: '日历及日期选择器', url: '/calendar'}
       ]
     }
   },

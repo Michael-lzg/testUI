@@ -33,6 +33,9 @@ export default {
       setTimeout(() => {
         this.$refs.previewer.show(index)
       }, 10)
+    },
+    delPhoto (index) {
+      this.imgList.splice(index, 1)
     }
   },
   components: { imageHtml5Upload, Previewer },

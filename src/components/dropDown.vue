@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div :class="{'mask':showList}">
     <div class="title" @click="showSelectList">
       <span class="fl">{{title}} {{selectItem}}</span>
       <img src="../assets/img/down-icon.png" alt="" width="13" class="fr" v-if="!showList">
       <img src="../assets/img/up-icon.png" alt="" width="13" class="fr" v-if="showList">
     </div>
-    <div class="selectList dropDowm" v-if="showList">
+    <div class="selectList dropDown" v-if="showList">
       <div class="listItem" v-for="(item,index) in list" :key="index" @click="toSelect(item,index)">
         <span class="fl" :class="{'c1':selectIndex === index}">{{item.name}}</span>
         <img src="../assets/img/gou.png" alt="" class="fr" v-if="selectIndex === index">

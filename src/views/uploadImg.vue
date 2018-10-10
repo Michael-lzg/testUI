@@ -25,7 +25,6 @@ export default {
   },
   methods: {
     load (val) {
-      console.log(val)
       this.imgList = val
     },
     show (index) {

@@ -23,6 +23,7 @@ export default {
   },
   methods: {
     uploadImg (e) {
+      console.log(e)
       let tag = e.target
       let fileList = tag.files
       let imgNum = fileList.length

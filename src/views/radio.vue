@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="item">
-      <radio :list="list" @selectChange="selectChange"></radio>
+      <dropdown :list="list" @selectChange="selectChange"></dropdown>
     </div>
     <div class="item">
-      <dropdown :list="list" @selectChange="selectChange"></dropdown>
+      <radio :list="list" @selectChange="selectChange"></radio>
     </div>
     <div class="title" @click="toSelect">弹窗选择</div>
     <selectBox :list="list" @submitSelect="submitSelect" @cancelSelect="cancelSelect" v-if="showSelect"></selectBox>

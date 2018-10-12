@@ -1,90 +1,141 @@
+<style lang="less">
+  .search{
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #fff;
+  }
+  .search-form {
+    position: relative;
+  }
+
+  .search-input {
+    height: 30px;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 14px;
+    text-indent: 15px;
+    background-color: rgba(3, 3, 3, .1);
+  }
+
+  .placeholder {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    color: #8e8e93;
+    top: 0px;
+    background-color: #EEEEEE;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .cancel-btn {
+    position: absolute;
+    right: 0;
+    color: #01d386;
+    height: 30px;
+    line-height: 30px;
+    transition: .5s ease-in;
+  }
+
+  .focus {
+    width: 100%;
+    .search-form {
+      background-color: #FFFFFF;
+    }
+    .search-input {
+      background-color: rgba(3, 3, 3, .1);
+      width: 300px;
+    }
+    .cancel-btn {
+      right: 0px;
+      top: 0px;
+    }
+  }
+</style>
 <template>
   <div class="search">
-    <div class="initSearch" v-if="!isSearch" @click="toFocus">
-      <img src="../assets/img/search.png" alt="" width="16">
-      <span>请输入搜索内容</span>
-    </div>
-    <div class="input" v-if="isSearch">
-      <input type="text" id="search" placeholder="请输入搜索内容" v-model.trim="keyword" @change="toSearch">
-      <img src="../assets/img/search.png" alt="" width="16" class="icon-search">
-      <!-- <img src="../assets/img/del_img.png" alt="" width="16" class="del"> -->
-      <span class="cancel fr" @click="cancel">取消</span>
-    </div>
+    <form action="javascript:;" class="search-form">
+      <input type="search" class="search-input" @focus="onFocus" :placeholder="isFocus ? '搜索': ''" v-model.trim="keyword" @keydown.enter="enter">
+      <div class="placeholder" @click="placeholderClick" v-if="!isFocus">
+        <img src="../assets/img/search.png" alt="" width="16" class="icon-search">
+        <span class="vm" v-show="!keyword && !isFocus" v-text="'搜索关键词'"></span>
+      </div>
+      <!-- <span class="cancel-btn fs-18" @click="cancel" v-if="isFocus">取消</span> -->
+    </form>
   </div>
 </template>
 
 <script>
 export default {
+  name: '',
   data () {
     return {
-      isSearch: false,
-      keyword: ''
+      isFocus: false,
+      keyword: '',
+      labelList: [],
+      selectedLabel: {},
+      isEnter: false
+    }
+  },
+  props: {
+    isCategory: {
+      type: Boolean,
+      default: false
+    },
+    label: {
+      type: Array
+    },
+    cancelText: {
+      type: String
     }
   },
   methods: {
-    toFocus () {
-      this.isSearch = true
-      this.$nextTick(() => {
-        document.getElementById('search').focus()
-      })
+    onFocus () {
+      this.isFocus = true
+      this.$emit('focus')
+      this.label && setTimeout(() => {
+        this.labelList = this.label
+        this.label.forEach(i => {
+          if (i.selected) {
+            this.selectedLabel = i
+          }
+        })
+      }, 200)
+    },
+    clear () {
+      this.isEnter = false
+      this.keyword = ''
+      this.$el.querySelector('.search-input').focus()
     },
     cancel () {
-      this.isSearch = false
+      this.isEnter = false
+      this.isFocus = false
+      this.keyword = ''
+      this.selectedLabel = {}
+      this.$emit('cancel')
     },
-    toSearch () {
-      if (this.keyword && this.isSearch) {
-        this.$emit('toSearch', this.keyword)
-      }
+    selectLabel (item) {
+      this.selectedLabel = item
+      this.labelList.forEach(i => {
+        this.$set(i, 'selected', false)
+      })
+      this.$set(item, 'selected', true)
+      this.$el.querySelector('.search-input').focus()
+    },
+    enter () {
+      this.isEnter = true
+      if (!this.keyword) return
+      this.$emit('enter', {
+        ...this.selectedLabel,
+        keyword: this.keyword
+      })
+      this.$el.querySelector('.search-input').blur()
+    },
+    placeholderClick () {
+      this.$el.querySelector('.search-input').focus()
     }
   }
 }
 </script>
-
-<style scoped lang="less">
-.search {
-  padding: 10px 15px;
-}
-.initSearch {
-  width: 100%;
-  height: 30px;
-  background-color: #fff;
-  line-height: 30px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  font-size: 14px;
-  color: #bbb;
-  >span{
-    text-indent: 6px;
-  }
-}
-.input{
-   width: 100%;
-   height: 30px;
-   line-height: 30px;
-   position: relative;
-   .icon-search{
-     position: absolute;
-     left: 14px;
-     top: 8px;
-   }
-   .del{
-     position: absolute;
-     right: 14px !important;
-     top: 8px;
-   }
-   >input{
-     width: 87%;
-     height: 30px;
-     border-radius: 30px;
-     background-color: #fff;
-     font-size: 14px;
-     text-indent: 32px;
-   }
-   .cancel{
-     color: #1890ff;
-   }
-}
-</style>

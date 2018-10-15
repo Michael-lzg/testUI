@@ -44,8 +44,10 @@ export default {
 <style scoped lang="less">
 .list{
   // height: 100%;
+  width: 100%;
   background-color: #fff;
   .listItem{
+    width: 100%;
     padding: 0 15px;
     height: 45px;
     line-height: 45px;

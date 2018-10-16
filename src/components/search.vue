@@ -10,11 +10,11 @@
 
   .search-input {
     height: 30px;
-    width: 100%;
+    width: 87%;
     border-radius: 30px;
     font-size: 14px;
     text-indent: 15px;
-    background-color: rgba(3, 3, 3, .1);
+    background-color: #EEEEEE;
   }
 
   .placeholder {
@@ -39,30 +39,30 @@
     transition: .5s ease-in;
   }
 
-  .focus {
-    width: 100%;
-    .search-form {
-      background-color: #FFFFFF;
-    }
-    .search-input {
-      background-color: rgba(3, 3, 3, .1);
-      width: 300px;
-    }
-    .cancel-btn {
-      right: 0px;
-      top: 0px;
-    }
-  }
+  // .focus {
+  //   width: 100%;
+  //   .search-form {
+  //     background-color: #FFFFFF;
+  //   }
+  //   .search-input {
+  //     background-color: rgba(3, 3, 3, .1);
+  //     width: 300px;
+  //   }
+  //   .cancel-btn {
+  //     right: 0px;
+  //     top: 0px;
+  //   }
+  // }
 </style>
 <template>
   <div class="search">
     <form action="javascript:;" class="search-form">
       <input type="search" class="search-input" @focus="onFocus" :placeholder="isFocus ? '搜索': ''" v-model.trim="keyword" @keydown.enter="enter">
+      <span class="cancel-btn fs-18" @click="cancel">取消</span>
       <div class="placeholder" @click="placeholderClick" v-if="!isFocus">
         <img src="../assets/img/search.png" alt="" width="16" class="icon-search">
         <span class="vm" v-show="!keyword && !isFocus" v-text="'搜索关键词'"></span>
       </div>
-      <!-- <span class="cancel-btn fs-18" @click="cancel" v-if="isFocus">取消</span> -->
     </form>
   </div>
 </template>

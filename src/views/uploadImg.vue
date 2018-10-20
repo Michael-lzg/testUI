@@ -10,10 +10,12 @@
     <div v-transfer-dom>
       <previewer :list="imgList" ref="previewer" v-if="flag"></previewer>
     </div>
+    <previewImg></previewImg>
   </div>
 </template>
 
 <script>
+import previewImg from '../components/preview'
 import imageHtml5Upload from './../components/image-html5-upload'
 import { Previewer, TransferDom } from 'vux'
 export default {
@@ -25,6 +27,7 @@ export default {
   },
   methods: {
     load (val) {
+      console.log(val)
       this.imgList = val
     },
     show (index) {
@@ -32,12 +35,9 @@ export default {
       setTimeout(() => {
         this.$refs.previewer.show(index)
       }, 10)
-    },
-    delPhoto (index) {
-      this.imgList.splice(index, 1)
     }
   },
-  components: { imageHtml5Upload, Previewer },
+  components: { imageHtml5Upload, Previewer, previewImg },
   directives: { TransferDom }
 }
 </script>

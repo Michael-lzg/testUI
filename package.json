@@ -17,6 +17,7 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "vue": "^2.5.2",
+    "vue-photo-preview": "^1.1.0",
     "vue-region-picker": "^3.0.1",
     "vue-router": "^3.0.1",
     "vuedraggable": "^2.16.0",

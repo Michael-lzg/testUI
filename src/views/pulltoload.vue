@@ -25,16 +25,6 @@ export default {
       }
     }
   },
-  computed: {
-    scrollTop () {
-      return document.documentElement.scrollTop
-    }
-  },
-  watch: {
-    scrollTop () {
-      cm.scrollTop()
-    }
-  },
   created () {
     for (var i = 0; i < 20; i++) {
       this.list.push({
@@ -42,8 +32,9 @@ export default {
         num: i + 1
       })
     }
+    var vm = this
     var list = document.getElementById('list')
-    cm.loadMore(list, this.loadMore)
+    cm.loadMore(list, vm.loadMore)
   }
 }
 </script>

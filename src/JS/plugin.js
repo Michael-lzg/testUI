@@ -10,7 +10,7 @@ cm.loadMore = function (ele, callback) {
     console.log(otherHeight)
     console.log(scrollTop + 'aaa')
     console.log(documentHeight + otherHeight - windowHeight + 'bbbbb')
-    if (scrollTop === documentHeight + otherHeight - windowHeight - 30) {
+    if (scrollTop === documentHeight + otherHeight - windowHeight) {
       callback()
     }
   }

@@ -137,6 +137,13 @@ const router = new Router({
       component: (resolve) => {
         require(['../views/calendar'], resolve)
       }
+    },
+    {
+      path: '/pulltoload',
+      name: 'pulltoload',
+      component: (resolve) => {
+        require(['../views/pulltoload'], resolve)
+      }
     }
   ]
 })

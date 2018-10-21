@@ -27,7 +27,8 @@ export default {
         {name: '百分比圆环', url: '/progressBar'},
         {name: 'echarts', url: '/echart'},
         {name: '时间选择器', url: '/dateTime'},
-        {name: '日历及日期选择器', url: '/calendar'}
+        {name: '日历及日期选择器', url: '/calendar'},
+        {name: '下拉加载更多', url: '/pulltoload'}
       ]
     }
   },

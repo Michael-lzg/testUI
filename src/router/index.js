@@ -144,6 +144,13 @@ const router = new Router({
       component: (resolve) => {
         require(['../views/pulltoload'], resolve)
       }
+    },
+    {
+      path: '/imgCut',
+      name: 'imgCut',
+      component: (resolve) => {
+        require(['../views/imgCut'], resolve)
+      }
     }
   ]
 })

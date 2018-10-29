@@ -23,6 +23,7 @@ export default {
         {name: '三级联动', url: '/region-picker'},
         {name: '选择城市', url: '/citySelect'},
         {name: '图片上传预览', url: '/uploadImg'},
+        {name: '图片上传裁剪', url: '/imgCut'},
         {name: '获取位置并搜索周边', url: '/location'},
         {name: '百分比圆环', url: '/progressBar'},
         {name: 'echarts', url: '/echart'},

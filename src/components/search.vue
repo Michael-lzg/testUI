@@ -39,20 +39,6 @@
     transition: .5s ease-in;
   }
 
-  // .focus {
-  //   width: 100%;
-  //   .search-form {
-  //     background-color: #FFFFFF;
-  //   }
-  //   .search-input {
-  //     background-color: rgba(3, 3, 3, .1);
-  //     width: 300px;
-  //   }
-  //   .cancel-btn {
-  //     right: 0px;
-  //     top: 0px;
-  //   }
-  // }
 </style>
 <template>
   <div class="search">

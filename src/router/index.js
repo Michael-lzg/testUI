@@ -151,6 +151,13 @@ const router = new Router({
       component: (resolve) => {
         require(['../views/imgCut'], resolve)
       }
+    },
+    {
+      path: '/selectMonth',
+      name: 'selectMonth',
+      component: (resolve) => {
+        require(['../views/selectMonth'], resolve)
+      }
     }
   ]
 })

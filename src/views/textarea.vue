@@ -2,8 +2,12 @@
   <div class="main">
     <h2>div模拟textarea实现高度自适应</h2>
     <div class="test_box" contenteditable="true"></div>
-    <div class="footer">
+    <!-- <div class="footer">
       <div class="test_box plbtn" contenteditable="true"></div>
+      <span>评论</span>
+    </div> -->
+    <div class="footer">
+      <textarea id="text-adaption" class="test_box plbtn" rows="1" @blur="onBule" @keyup="init"></textarea>
       <span>评论</span>
     </div>
 
@@ -14,13 +18,33 @@
 
 <script>
 export default {
+  data () {
+    return {
+      timer: ''
+    }
+  },
   methods: {
     getId (id) {
       return document.getElementById(id)
     },
     init () {
       this.getId('text-adaption').style.height = 'auto'
-      this.getId('text-adaption').style.height = this.getId('text-adaption').scrollHeight + 'px'
+      this.getId('text-adaption').style.height =
+        this.getId('text-adaption').scrollHeight + 'px'
+    },
+    onFocus (e) {
+      console.log(999)
+      // setTimeout(function () {
+      //   e.target.scrollIntoView(true)
+      //   // true:元素的顶端将和其所在滚动区的可视区域的顶端对齐; false:底端对齐。
+      // }, 200)
+      var timer = setInterval(
+        function () {
+          document.body.scrollTop = document.body.scrollHeight
+        }, 100)
+      setTimeout(function () {
+        clearInterval(timer)
+      }, 500)
     }
   },
   mounted () {}

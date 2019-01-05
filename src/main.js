@@ -5,7 +5,8 @@ import App from './App'
 import router from './router'
 import showTip from './components/showTip'
 import Dialog from './components/dialog'
-
+import vConsole from './JS/vconsole'
+Vue.use(vConsole)
 Vue.prototype.$showTip = showTip
 Vue.prototype.$dialog = Dialog
 

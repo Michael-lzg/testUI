@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <button class="footerBtn" :class="{'o8':loading}" @click="submit" v-if="count==1" :disabled="loading">
-      <img src="../assets/img/ring.png" alt="" width="20" class="loading" v-if="loading">
+      <img src="../assets/img/ring.png" alt="" class="loading" v-if="loading">
       <span>{{txt}}</span>
     </button>
     <div class="footerBtn2" v-if="count==2">

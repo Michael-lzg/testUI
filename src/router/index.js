@@ -118,6 +118,13 @@ const router = new Router({
       }
     },
     {
+      path: '/dateTimeRang',
+      name: 'dateTimeRang',
+      component: (resolve) => {
+        require(['../views/dateTimeRang'], resolve)
+      }
+    },
+    {
       path: '/citySelect',
       name: 'citySelect',
       component: (resolve) => {

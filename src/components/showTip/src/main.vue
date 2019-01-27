@@ -8,6 +8,7 @@
   padding: 15px;
   border-radius: 8px;
   text-align: center;
+  // font-size: 0;
   img {
     margin-bottom: 8px;
   }

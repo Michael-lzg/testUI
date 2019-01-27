@@ -6,6 +6,9 @@ html, body {
   color: black;
   -webkit-text-size-adjust: 100%;
 }
+body{
+  font-size: 16px;
+}
 .bgall{
   background-color: #F1F2F5 !important;
   height: 8px;

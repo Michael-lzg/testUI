@@ -1,6 +1,8 @@
 <template>
   <div class="list">
-    <div class="listItem" v-for="(item,index) in list" :key="index" @click="toUrl(item)">{{item.name}}</div>
+    <div class="listItem" v-for="(item,index) in list" :key="index" @click="toUrl(item)">{{item.name}}
+      <div class="bb1"></div>
+    </div>
   </div>
 </template>
 
@@ -55,7 +57,8 @@ export default {
     padding: 0 15px;
     height: 45px;
     line-height: 45px;
-    border-bottom: 1px solid #ccc;
+    position: relative;
+    // border-bottom: 1px solid #ccc;
   }
 }
 </style>

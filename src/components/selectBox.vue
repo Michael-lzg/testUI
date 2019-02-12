@@ -5,12 +5,13 @@
       <div class="selectList">
         <div class="listItem" v-for="(item,index) in list" :key="index" @click="toSelect(item,index)">
           <span :class="{'c1':selectIndex === index}">{{item.name}}</span>
-          <img src="../assets/img/gou.png" alt="" v-if="selectIndex === index">
+          <!-- <img src="../assets/img/gou.png" alt="" v-if="selectIndex === index"> -->
+          <i class="iconfont icon-i c1 fr" v-if="selectIndex === index"></i>
         </div>
       </div>
       <div class="footer tc">
         <span class="cancel" @click="onCancel">取消</span>
-        <span class="submit" @click="onSubmit">确定</span>
+        <span class="submit c1" @click="onSubmit">确定</span>
       </div>
     </div>
   </div>
@@ -78,10 +79,10 @@ export default {
     font-size: 14px;
     text-align: center;
     position: relative;
-    > img {
+    > i {
       position: absolute;
-      top: 16px;
-      right: 10px;
+      top: 0px;
+      right: 0px;
     }
   }
 }
@@ -108,7 +109,7 @@ export default {
     width: 50%;
     height: 50px;
     border-radius: 0 0 10px 0;
-    color: #1890FF;
+    // color: #1890FF;
   }
 }
 .c1{

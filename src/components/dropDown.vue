@@ -8,7 +8,7 @@
     <div class="selectList dropDown" v-if="showList">
       <div class="listItem" v-for="(item,index) in list" :key="index" @click="toSelect(item,index)">
         <span class="fl" :class="{'c1':selectIndex === index}">{{item.name}}</span>
-        <img src="../assets/img/gou.png" alt="" class="fr" v-if="selectIndex === index">
+        <i class="iconfont icon-i c1 fr" v-if="selectIndex === index"></i>
       </div>
     </div>
   </div>
@@ -64,10 +64,7 @@ export default {
   .listItem{
     height: 45px;
     line-height: 45px;
-    font-size: 14px;
-    >img{
-      margin-top: 16px;
-    }
+    font-size: 16px;
   }
 }
 .c1{

@@ -166,11 +166,18 @@ const router = new Router({
         require(['../views/selectMonth'], resolve)
       }
     },
+    // {
+    //   path: '/Plugin',
+    //   name: 'Plugin',
+    //   component: (resolve) => {
+    //     require(['../views/Plugin/html2canvas.vue'], resolve)
+    //   }
+    // },
     {
       path: '/Plugin',
       name: 'Plugin',
       component: (resolve) => {
-        require(['../views/Plugin/html2canvas.vue'], resolve)
+        require(['../views/plugin.vue'], resolve)
       }
     }
   ]

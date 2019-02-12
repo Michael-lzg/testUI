@@ -3,11 +3,14 @@
     <div class="listItem" v-for="(item,index) in list" :key="index" @click="toUrl(item)">{{item.name}}
       <div class="bb1"></div>
     </div>
+    <footerBar></footerBar>
   </div>
 </template>
 
 <script>
+import footerBar from '../components/footerBar'
 export default {
+  components: { footerBar },
   data () {
     return {
       list: [
@@ -21,18 +24,22 @@ export default {
         {name: '无数据缺省页', url: '/noData'},
         {name: '搜索框', url: '/search'},
         {name: '倒计时', url: '/djs'},
-        {name: '拖拽移动', url: '/Draggable'},
-        {name: '三级联动', url: '/region-picker'},
-        {name: '选择城市', url: '/citySelect'},
-        {name: '图片上传预览', url: '/uploadImg'},
-        {name: '图片上传裁剪', url: '/imgCut'},
-        {name: '获取位置并搜索周边', url: '/location'},
-        {name: '百分比圆环', url: '/progressBar'},
-        {name: 'echarts', url: '/echart'},
         {name: '时间选择器', url: '/dateTime'},
         {name: '选择时间范围', url: '/dateTimeRang'},
         {name: '选择年月', url: '/selectMonth'},
-        {name: '日历及日期选择器', url: '/calendar'}
+        {name: '日历及日期选择器', url: '/calendar'},
+        {name: '拖拽移动', url: '/Draggable'}
+        // {name: '三级联动', url: '/region-picker'},
+        // {name: '选择城市', url: '/citySelect'},
+        // {name: '图片上传预览', url: '/uploadImg'},
+        // {name: '图片上传裁剪', url: '/imgCut'},
+        // {name: '获取位置并搜索周边', url: '/location'},
+        // {name: '百分比圆环', url: '/progressBar'},
+        // {name: 'echarts', url: '/echart'},
+        // {name: '时间选择器', url: '/dateTime'},
+        // {name: '选择时间范围', url: '/dateTimeRang'},
+        // {name: '选择年月', url: '/selectMonth'},
+        // {name: '日历及日期选择器', url: '/calendar'}
         // {name: '下拉加载更多', url: '/pulltoload'}
       ]
     }
@@ -49,15 +56,15 @@ export default {
 
 <style scoped lang="less">
 .list{
-  // height: 100%;
+  height: 100%;
   width: 100%;
-  background-color: #fff;
   .listItem{
     width: 100%;
     padding: 0 15px;
     height: 45px;
     line-height: 45px;
     position: relative;
+    background-color: #fff;
     // border-bottom: 1px solid #ccc;
   }
 }

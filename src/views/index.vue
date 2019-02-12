@@ -15,7 +15,7 @@ export default {
     return {
       list: [
         {name: '单选框', url: '/radio'},
-        {name: '下拉选择', url: '/radio'},
+        // {name: '下拉选择', url: '/radio'},
         {name: '底部弹出', url: '/actionSheet'},
         {name: '底部按钮', url: '/footer'},
         {name: 'toast提示', url: '/toast'},

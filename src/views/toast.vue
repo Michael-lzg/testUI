@@ -31,7 +31,7 @@ export default {
     },
     commonTip () {
       this.$showTip({
-        littleTipMessage: '普通提示',
+        littleTipMessage: '这是一条普通提示',
         type: 'common'
       })
     },
@@ -53,9 +53,9 @@ export default {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  color: #1890FF;
+  color: #597EF7 !important;
   margin-top: 10px;
-  border: 1px solid #1890FF;
+  border: 1px solid #597EF7 !important;
   border-radius: 4px;
 }
 </style>

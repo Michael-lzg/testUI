@@ -2,15 +2,12 @@
   <div>
     <div id="bar" :style="{width: '100%', height: '300px'}"></div>
     <div id="pie" :style="{width: '100%', height: '300px'}"></div>
-    <div id="map" :style="{width: '100%', height: '300px'}"></div>
+    <!-- <div id="map" :style="{width: '100%', height: '300px'}"></div> -->
   </div>
 </template>
 
 <script>
 import echarts from 'echarts'
-import option from '../JS/china' // 引入配置项
-import 'echarts/map/js/china' // 引入china.js地图文件
-import 'echarts/theme/shine.js'
 export default {
   name: 'hello',
   data () {
@@ -21,7 +18,6 @@ export default {
   mounted () {
     this.drawLine()
     this.drawPie()
-    this.drawChinaMap()
   },
   methods: {
     drawLine () {
@@ -73,13 +69,6 @@ export default {
             { value: 548, name: '搜索引擎' }]
         }]
       })
-    },
-    drawChinaMap () {
-      var myChart = echarts.init(
-        document.getElementById('map'),
-        'shine'
-      )
-      myChart.setOption(option)
     }
   }
 }

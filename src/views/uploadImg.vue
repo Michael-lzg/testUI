@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div v-for="(img, index) in imgList" :key="index" class="img-wrapper">
       <img class="img-list" :src="img.src" width="75" height="75" @click="show(index)">
-      <img src="../assets/img/del_img.png" class="del-img-icon" width="18" @click="delPhoto(index)">
+      <img src="../assets/img/del.png" class="del-img-icon" width="18" @click="delPhoto(index)">
     </div>
     <div class="img-wrapper">
       <image-html5-upload :imgArr="imgList" @add="load"></image-html5-upload>
@@ -11,7 +11,7 @@
       <previewer :list="imgList" ref="previewer" v-if="flag"></previewer>
     </div>
     <previewImg></previewImg>
-    <uploaderComponent></uploaderComponent>
+    <!-- <uploaderComponent></uploaderComponent> -->
   </div>
 </template>
 

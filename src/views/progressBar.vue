@@ -3,7 +3,7 @@
     <div class="demo-progressbar demo-pitch">
       <div class="demo-progress-cricle">
         <!-- 代码部分start -->
-        <yd-progressbar :progress="progress1" trailWidth="8">
+        <yd-progressbar :progress="progress1" trailWidth="4">
           <span class="Num" style="font-size: 28px">{{progress1*100}}%</span>
           <!-- <yd-countup :endnum="progress1 * 100" duration="1" suffix="%"></yd-countup> -->
         </yd-progressbar>
@@ -34,8 +34,8 @@ import ydProgressbar from '../components/progressBar'
 export default {
   data () {
     return {
-      progress1: 0.1,
-      progress2: 0.4,
+      progress1: 0.4,
+      progress2: 0.8,
       progress3: 0.6
     }
   },

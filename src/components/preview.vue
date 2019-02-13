@@ -27,5 +27,7 @@ export default {
 </script>
 
 <style scoped>
-
+.imgList{
+  margin-top: 20px;
+}
 </style>

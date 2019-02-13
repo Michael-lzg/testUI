@@ -23,6 +23,7 @@ export default {
         {name: 'textarea', url: '/textarea'},
         // {name: '无数据缺省页', url: '/noData'},
         {name: '搜索框', url: '/search'},
+        {name: '百分比圆环', url: '/progressBar'},
         {name: '倒计时', url: '/djs'},
         {name: '时间选择器', url: '/dateTime'},
         {name: '选择时间范围', url: '/dateTimeRang'},

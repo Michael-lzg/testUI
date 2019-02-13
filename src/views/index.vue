@@ -21,14 +21,14 @@ export default {
         {name: 'toast提示', url: '/toast'},
         {name: 'dialog选择', url: '/dialog'},
         {name: 'textarea', url: '/textarea'},
-        {name: '无数据缺省页', url: '/noData'},
+        // {name: '无数据缺省页', url: '/noData'},
         {name: '搜索框', url: '/search'},
         {name: '倒计时', url: '/djs'},
         {name: '时间选择器', url: '/dateTime'},
         {name: '选择时间范围', url: '/dateTimeRang'},
-        {name: '选择年月', url: '/selectMonth'},
-        {name: '日历及日期选择器', url: '/calendar'},
-        {name: '拖拽移动', url: '/Draggable'}
+        // {name: '选择年月', url: '/selectMonth'},
+        {name: '日历及日期选择器', url: '/calendar'}
+        // {name: '拖拽移动', url: '/Draggable'}
         // {name: '三级联动', url: '/region-picker'},
         // {name: '选择城市', url: '/citySelect'},
         // {name: '图片上传预览', url: '/uploadImg'},

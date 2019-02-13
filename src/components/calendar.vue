@@ -424,7 +424,7 @@ export default {
 .calendar-year > span,
 .calendar-month > span {
   position: absolute;
-  top: -3px;
+  top: -10px;
   left: 25%;
   display: inline-block;
   padding: 0.16rem;

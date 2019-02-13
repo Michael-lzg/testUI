@@ -74,13 +74,13 @@ textarea {
     line-height: 40px;
     text-align: center;
     position: relative;
-    > img {
+    > i {
       position: absolute;
-      right: 30px;
-      top: 13px;
+      right: 15px;
+      top: 0px;
     }
     .active{
-      color: #40A9FF;
+      color: #597EF7;
     }
   }
 }
@@ -98,12 +98,13 @@ textarea {
       <article class="selectList" v-if="type === 'select'">
         <div class="listItem" v-for="(item,index) in list" :key="index" @click="toSelect(item)">
           <span :class="{'active':item.isSelect}">{{item.val}}</span>
-          <img src="../../../assets/img/gou.png" alt="" width="16" class="fr" v-if="item.isSelect">
+          <!-- <img src="../../../assets/img/gou.png" alt="" width="16" class="fr" v-if="item.isSelect"> -->
+          <i class="iconfont icon-i c1" v-if="item.isSelect"></i>
         </div>
       </article>
       <div class="footer tc">
         <button class="my-cancel-btn" v-show="showCancelBtn" v-text="cancelText" @click="cancelClick"></button>
-        <button class="confirm-btn" :style="{width: showCancelBtn ? '50%' : '100%', color: theme}" v-text="confirmText" @click="confirmClick"></button>
+        <button class="confirm-btn c1" :style="{width: showCancelBtn ? '50%' : '100%', color: theme}" v-text="confirmText" @click="confirmClick"></button>
       </div>
     </div>
   </div>

@@ -2,7 +2,9 @@
   <div>
     <draggable v-model="list" :move="getdata" @update="datadragEnd">
       <transition-group>
-        <div class="listItem" v-for="(item,index) in list" :key="index">{{item.name}}</div>
+        <div class="listItem" v-for="(item,index) in list" :key="index">{{item.name}}
+          <div class="bb1"></div>
+        </div>
       </transition-group>
     </draggable>
   </div>
@@ -74,9 +76,10 @@ export default {
 
 <style scoped lang="less">
 .listItem{
-  height: 35px;
-  line-height: 35px;
+  height: 45px;
+  line-height: 45px;
   padding: 0 15px;
-  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  position: relative;
 }
 </style>

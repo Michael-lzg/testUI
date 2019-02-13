@@ -25,7 +25,7 @@ export default {
         // {name: '搜索框', url: '/search'},
         // {name: '倒计时', url: '/djs'},
         {name: '拖拽移动', url: '/Draggable'},
-        {name: '三级联动', url: '/region-picker'},
+        // {name: '三级联动', url: '/region-picker'},
         {name: '选择城市', url: '/citySelect'},
         {name: '图片上传预览', url: '/uploadImg'},
         {name: '图片上传裁剪', url: '/imgCut'},

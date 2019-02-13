@@ -7,7 +7,7 @@
       <span>评论</span>
     </div> -->
     <div class="footer">
-      <textarea id="text-adaption" class="test_box plbtn" rows="1" @blur="onBule" @keyup="init"></textarea>
+      <textarea id="text-adaption" class="test_box plbtn" rows="1"  @keyup="init"></textarea>
       <span>评论</span>
     </div>
 
@@ -88,8 +88,8 @@ h2 {
   > span {
     position: absolute;
     right: 15px;
-    bottom: 16px;
-    color: #1890ff;
+    bottom: 22px;
+    color: #597EF7;
   }
 }
 .plbtn {

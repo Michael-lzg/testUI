@@ -186,6 +186,13 @@ const router = new Router({
       component: (resolve) => {
         require(['../views/chinaMap.vue'], resolve)
       }
+    },
+    {
+      path: '/video',
+      name: 'video',
+      component: (resolve) => {
+        require(['../views/video.vue'], resolve)
+      }
     }
   ]
 })

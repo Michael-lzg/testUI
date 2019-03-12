@@ -31,7 +31,8 @@ export default {
         // {name: '图片上传裁剪', url: '/imgCut'},
         // {name: '获取位置并搜索周边', url: '/location'},
         {name: '柱状图/饼图', url: '/echart'},
-        {name: '中国地图', url: '/chinaMap'}
+        {name: '中国地图', url: '/chinaMap'},
+        {name: '视频播放', url: '/video'}
         // {name: '时间选择器', url: '/dateTime'},
         // {name: '选择时间范围', url: '/dateTimeRang'},
         // {name: '选择年月', url: '/selectMonth'},

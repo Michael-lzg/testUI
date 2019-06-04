@@ -193,6 +193,13 @@ const router = new Router({
       component: (resolve) => {
         require(['../views/video.vue'], resolve)
       }
+    },
+    {
+      path: '/changeIndex',
+      name: 'changeIndex',
+      component: (resolve) => {
+        require(['../views/changeIndex.vue'], resolve)
+      }
     }
   ]
 })

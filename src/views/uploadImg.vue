@@ -10,7 +10,7 @@
     <div v-transfer-dom>
       <previewer :list="imgList" ref="previewer" v-if="flag"></previewer>
     </div>
-    <previewImg></previewImg>
+    <!-- <previewImg></previewImg> -->
     <!-- <uploaderComponent></uploaderComponent> -->
   </div>
 </template>

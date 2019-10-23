@@ -76,7 +76,9 @@ export default {
 
 <style scoped>
 .list{
-  padding: 0 15px;
+  padding: 15px;
+  background-color: #fff;
+  height: 100%;
 }
 .item{
   height: 40px;

@@ -47,14 +47,16 @@ export default {
 
 <style scoped>
 .list{
-  padding: 0 15px;
+  padding: 15px;
+  background-color: #fff;
+  height: 100%;
 }
 .item{
   height: 40px;
   line-height: 40px;
   text-align: center;
   color: #597EF7 !important;
-  margin-top: 10px;
+  margin-bottom: 10px;
   border: 1px solid #597EF7 !important;
   border-radius: 4px;
 }

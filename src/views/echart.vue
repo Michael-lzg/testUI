@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mainPage">
     <div id="bar" :style="{width: '100%', height: '300px'}"></div>
     <div id="pie" :style="{width: '100%', height: '300px'}"></div>
     <!-- <div id="map" :style="{width: '100%', height: '300px'}"></div> -->
@@ -74,5 +74,8 @@ export default {
 }
 </script>
 <style scoped>
-
+.mainPage{
+  height: 100%;
+  background-color: #fff;
+}
 </style>

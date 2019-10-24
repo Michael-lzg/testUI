@@ -49,7 +49,7 @@ export default {
 
 </style>
 <style>
-img {
+.imgCut img {
   display: block;
   margin: 0 auto;
 }
